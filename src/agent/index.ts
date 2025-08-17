@@ -1,7 +1,7 @@
-import { getPRDiff, getPRFiles, postPRComment } from "../github/index.js";
-import { withSandbox } from "./sandbox.js";
-import { getCodeContext } from "./context.js";
-import { reviewPRWithContext } from "./llm.js";
+import { getPRDiff, getPRFiles, postPRComment } from "../github/index";
+import { withSandbox } from "./sandbox";
+import { getCodeContext } from "./context";
+import { reviewPRWithContext } from "./llm";
 
 export async function handleGithubWebhook(body: any) {
   const { action, pull_request, repository } = body;

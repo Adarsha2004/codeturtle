@@ -1,4 +1,8 @@
 import { Octokit } from "@octokit/rest";
+import dotenv from "dotenv";
+
+// Ensure environment variables are loaded
+dotenv.config();
 
 const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
 
