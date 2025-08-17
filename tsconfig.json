@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    // File Layout
+    "outDir": "./dist",
+    "rootDir": "./src",
+
+    // Environment Settings
+    "module": "ESNext",
+    "target": "ES2020",
+    "moduleResolution": "node",
+    "types": ["node"],
+
+    // Import/Export
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "verbatimModuleSyntax": false,
+
+    // Outputs
+    "sourceMap": true,
+
+    // Strictness (balanced for API work)
+    "strict": true,
+    "isolatedModules": true,
+    "skipLibCheck": true,
+
+    // Module Detection
+    "moduleDetection": "force"
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
