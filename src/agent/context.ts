@@ -1,5 +1,8 @@
 export async function getCodeContext(sandbox: any, repoUrl: string, branch: string, files: string[]) {
-  await sandbox.commands.run(`git clone -b ${branch} ${repoUrl} repo`);
+  // Add GitHub token for authentication
+  const authenticatedUrl = repoUrl.replace('https://github.com/', `https://${process.env.GITHUB_TOKEN}@github.com/`);
+  
+  await sandbox.commands.run(`git clone -b ${branch} ${authenticatedUrl} repo`);
   let context = '';
 
   for (const file of files) {
