@@ -27,6 +27,7 @@ export async function postPRComment(
             body,
         });
         console.log("Comment posted successfully:", response.data.html_url);
+        console.log('posted comment on pr');
     } catch (error) {
         console.error("Error posting comment:", error);
     }
